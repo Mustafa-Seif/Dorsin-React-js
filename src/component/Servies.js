@@ -1,6 +1,23 @@
-import React from 'react'
+import React, { useRef }  from 'react'
+
 
 const servies = () => {
+    
+
+    window.addEventListener("scroll",()=>{
+        const servies =document.querySelector(".servies")
+        const cards =document.querySelector(".servies-cards")
+        if (window.scrollY >= servies.offsetTop -50 ) {
+            cards.classList.add("show-servies")
+        }
+        else{
+            cards.classList.remove("show-servies")
+
+        }
+
+    })
+    
+    
     return (
         <section className='servies container' id='servies'>
             <div className='servies-text'>
@@ -8,7 +25,7 @@ const servies = () => {
                 <div className='border'></div>
                 <p>We craft digital, graphic and dimensional thinking, to create category leading brand experiences<br /> that have meaning and add a value for our clients.</p>
             </div>
-            <div className='servies-cards'>
+            <div className='servies-cards' >
                 <div className='servies-card'>
                     <span><i class="fa-solid fa-gem"></i></span>
                     <h4>Digital Design</h4>
@@ -50,3 +67,15 @@ const servies = () => {
 }
 
 export default servies
+
+
+// window.onscroll = function name() {
+    //     const servies = document.querySelector(".servies")
+    //     const cards = document.querySelector(".servies-cards")
+    //     if (window.scrollY >= servies.offsetTop ) {
+    //         cards.style.display="flex"
+    //         cards.style.opacity="1"
+    //         cards.style.transition="5s"
+            
+    //     }
+    // }

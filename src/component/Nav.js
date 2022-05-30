@@ -7,9 +7,7 @@ const Nav = () => {
       if (window.scrollY >= 200) {
         document.querySelector("nav").classList.add("nav-scroll")
       }
-      else{
-        document.querySelector("nav").classList.remove("nav-scroll")
-      }
+      
   }
 
   function hideMenu() {
@@ -26,7 +24,7 @@ const Nav = () => {
             <a href='#' onClick={hideMenu}>Features</a>
             <a href='#Pricing' onClick={hideMenu}>Pricing</a>
             <a href='#' onClick={hideMenu}>Blog</a>
-            <a href='#' onClick={hideMenu}>Contact</a>
+            <a href='#contact' onClick={hideMenu}>Contact</a>
         </div>
         <button href='#' className='try'>Try it Free</button>
         <i class="fa-solid fa-bars menu" onClick={hideMenu}></i>

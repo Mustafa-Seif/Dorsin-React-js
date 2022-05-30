@@ -56,16 +56,7 @@ header{
 
 }
 
-/* header::after{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color:rgba(152, 63, 235, 0.24);
 
-} */
 
 nav{
   display: flex;
@@ -76,12 +67,12 @@ nav{
   color: var(--second-color);
   padding: 20px 0;
   z-index: 9;
-  transition: 2000ms;
+  transition: 1000ms;
   
 }
 
 .nav-scroll{
-  background-color: #75488F !important;
+  background-color: #212529 !important;
 }
 
 nav span:first-child{
@@ -98,6 +89,7 @@ nav span:first-child{
 nav a{
   color: rgba(255, 255, 255, 0.842);
   margin: 0 15px;
+  padding-bottom: 26px;
 
 }
 
@@ -211,6 +203,10 @@ nav a:hover,.Home{
   align-items: center;
   text-align: center;
   padding-top: 100px;
+  min-height: 600px;
+  
+  
+
 }
 
 
@@ -219,6 +215,9 @@ nav a:hover,.Home{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 500px;
+  opacity: 0;
+  transition: 3s;
   
 }
 
@@ -227,12 +226,15 @@ nav a:hover,.Home{
   height: 200px;
   margin: 40px 15px;
   cursor: pointer;
+  
+  
+
 
 }
 
 .servies-card p{
   font-size: 14px;
-  color:rgba(17, 16, 16, 0.5) ;
+  color:rgba(17, 16, 16, 0.664) ;
 }
 
 .servies-card h4{
@@ -269,6 +271,16 @@ nav a:hover,.Home{
   background-color: var(--first-color);
   display: inline-block;
   margin-bottom: 20px;
+}
+
+
+/* -------------from fun---------- */
+
+.show-servies{
+  margin-top: 20px;
+  opacity: 1;
+  transition: 2s;
+
 }
 
 /* ========about========= */
@@ -486,10 +498,12 @@ ul li::before {
   height: 400px;
   overflow: hidden;
   text-align: center;
-  background-image: url(/src/assets/start2.jpg);
+  background-image: url(/src/assets/start2.jpg) ;
   background-repeat: no-repeat;
   background-size: cover;
+  /* background-position: center; */
   color: #FFFFFF;
+
 }
 
 .background{
@@ -557,6 +571,18 @@ form button{
   width: 20%;
 }
 
+/* ---------------------- */
+form table {
+  text-align: start;
+  margin-bottom: 10px;
+  margin-top: -5px;
+  color: #fb3e3e;
+}
+
+.btnName{
+  display: none;
+}
+
 
 
 /* =========footer========== */
@@ -578,7 +604,7 @@ footer i{
 @media only screen and (max-width:850px){
   nav{
     justify-content: space-between;
-    background-color: #75488F;
+    background-color: #212529;
 
   }
   .nav-link{
@@ -587,7 +613,7 @@ footer i{
     position: absolute;
     top: 70px;
     left: 0%;
-    background-color: #75488F;
+    background-color: #212529;
     width: 100%;
     text-align: center;
     display: none;
@@ -672,6 +698,11 @@ footer i{
     footer p{
       font-size: 12px;
     }
+
+    .people-card h5{
+      margin-top: 50px;
+      font-size: 15px;
+     }
 }
 
 
